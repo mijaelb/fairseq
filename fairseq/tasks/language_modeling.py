@@ -111,7 +111,7 @@ class LanguageModelingTask(FairseqTask):
         dictionary = None
         output_dictionary = None
         if args.data:
-            paths = args.data.split(":")
+            paths = [args.data]
             assert len(paths) > 0
             dictionary = Dictionary.load(os.path.join(paths[0], "dict.txt"))
             print("| dictionary: {} types".format(len(dictionary)))
